@@ -29,7 +29,10 @@ Este programa permite converter números entre diferentes bases numéricas por m
 - Validação de entradas.
 
 - Tratamento de números que ultrapassam o limite do tipo `int`.
-
+  
+- Submenu para escolher a conversão decimal desejada.
+  
+- Interface de console com espaçamento entre menus e resultados.
 
 
 ## Tecnologias utilizadas
