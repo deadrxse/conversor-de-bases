@@ -1,7 +1,7 @@
 /*
 Projeto: Conversor de Bases Numericas em C++
 
-O programa é simples mas realiza convertor entre as bases
+O programa Ã© simples mas realiza convertor entre as bases
 binario, decimal, octal e hexadecimal.
 
 Foi feito com o auxilio de IA, me ensinando passo a passo
@@ -199,7 +199,9 @@ int main(){
 	
 	int opcao;
 	// CARA INICIAL DO PROGRAMA
-	do {	
+	do {
+		cout << "----------------------------------" << endl;
+		cout << endl;	
 		cout << "============================" << endl;
 		cout << "     CONVERSOR DE BASES     " << endl;
 		cout << "============================" << endl;
@@ -222,14 +224,16 @@ int main(){
 			opcao = -1;
 			continue;
 		}
-	// MENU SWITCH COMEÇA AQUI
+	// MENU SWITCH COMEÃ‡A AQUI
 		switch (opcao){
 			// BINARIO
 			case 1:{
 				string numero;
 				
+				cout << endl;
 				cout << "Digite um numero binario: ";
 				cin >> numero;
+				cout << endl;
 				
 				int resultado = binarioParaDecimal(numero);
 				
@@ -247,13 +251,49 @@ int main(){
 			case 2: {
 				string entrada;
 				int numero;
+				int subOpcao;
 				
-				cout << "Digite um numero decimal: " << endl;
+				cout << endl;
+				cout << "====== CONVERSAO DECIMAL ======" << endl;
+				cout << endl;
+				
+				cout << "1 - Decimal para binario" << endl;
+				cout << "2 - Decimal para octal" << endl;
+				cout << "3 - Decimal para hexadecimal" << endl;
+				cout << "4 - Mostrar todas as conversoes" << endl;
+				cout << "0 - Voltar ao menu principal" << endl;
+				
+				cout << endl;
+				cout << "Escolha uma opcao: ";
+				cin >> subOpcao;
+				cout << endl;
+				
+				//verifica se a entrada do submenu e valida
+				if (cin.fail()){
+					cin.clear();
+					cin.ignore(1000, '\n');
+					cout << "Opcao invalida!" << endl;
+					break;
+				}
+				
+				//Volta ao menu principal
+				if (subOpcao == 0){
+					cout << "Voltando ao menu principal..." << endl;
+					break;
+				}
+				
+				//verifica se a opcao existe
+				if (subOpcao < 1 || subOpcao > 4){
+					cout << "Opcao invalida!" << endl;
+					break;
+				}
+				
+				cout << endl;
+				cout << "Digite um numero decimal: ";
 				cin >> entrada;
 				
 				if (numeroValido(entrada) == false){
 					cout << "Numero invalido!" << endl;
-					
 					break;
 				}
 				
@@ -261,15 +301,40 @@ int main(){
 				
 				if (!(conversor >> numero)){
 					cout << "Numero muito grande ou invalido!" << endl;
-					
 					break;
 				}
 				
-				cout << "Resultado em binario: " << decimalParaBinario(numero) << endl;
+				cout << endl;
 				
-				cout << "Resultado em octal: " << decimalParaOctal(numero) << endl;
+				switch (subOpcao){
+					
+					case 1:
+						cout << "Resultado em binario: " << decimalParaBinario(numero) << endl;
+						break;
+					
+					case 2:
+						cout << "Resultado em octal: " << decimalParaOctal(numero) << endl;
+						break;
+						
+					case 3:
+						cout << "Resultado em hexadecimal: " << decimalParaHexadecimal(numero) << endl;
+						break;
+					
+					case 4:
+						cout << "Resultado em binario: " << decimalParaBinario(numero) << endl;
 				
-				cout << "Resultado em hexadecimal: " << decimalParaHexadecimal(numero) << endl;
+						cout << "Resultado em octal: " << decimalParaOctal(numero) << endl;
+				
+						cout << "Resultado em hexadecimal: " << decimalParaHexadecimal(numero) << endl;
+						break;
+						
+					case 0:
+						cout << "Voltando ao menu principal..." << endl;
+						break;
+						
+					default:
+						cout << "Opcao invalida" << endl;
+				}
 				
 				break;
 		}
@@ -277,8 +342,10 @@ int main(){
 			case 3:{
 				string numero;
 				
+				cout << endl;
 				cout << "Digite um numero octal: ";
 				cin >> numero;
+				cout << endl;
 				
 				int resultado = octalParaDecimal(numero);
 				
@@ -296,8 +363,10 @@ int main(){
 			case 4:{
 				string numero;
 				
+				cout << endl;
 				cout << "Digite um numero hexadecimal: ";
 				cin >> numero;
+				cout << endl;
 				
 				int resultado = hexadecimalParaDecimal(numero);
 				
@@ -315,15 +384,16 @@ int main(){
 			case 0:
 				cout << "Encerrando programa..." << endl;
 				break;
-			// CODIGO DE ERRO, RETORNA AO COMEÇO	
+			// CODIGO DE ERRO, RETORNA AO COMEÃ‡O	
 			default:
 				cout << "Opcao invalida! Tente novamente." << endl;
 				
 				break;
 		}
+		
+		cout << endl << endl;
 			
 	}while (opcao != 0);
 		
 	return 0;
 }
-
