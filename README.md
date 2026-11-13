@@ -1,12 +1,12 @@
-\# Conversor de Bases Numéricas
+# Conversor de Bases Numéricas
 
 
 
-Projeto desenvolvido em \*\*C++\*\*, utilizando o ambiente Dev-C++.
+Projeto desenvolvido em **C++**, utilizando o ambiente Dev-C++.
 
 
 
-\## Sobre o projeto
+## Sobre o projeto
 
 
 
@@ -14,51 +14,51 @@ Este programa permite converter números entre diferentes bases numéricas por m
 
 
 
-\## Funcionalidades
+## Funcionalidades
 
 
 
-\- Conversão de binário para decimal.
+- Conversão de binário para decimal.
 
-\- Conversão de decimal para binário, octal e hexadecimal.
+- Conversão de decimal para binário, octal e hexadecimal.
 
-\- Conversão de octal para decimal.
+- Conversão de octal para decimal.
 
-\- Conversão de hexadecimal para decimal.
+- Conversão de hexadecimal para decimal.
 
-\- Validação de entradas.
+- Validação de entradas.
 
-\- Tratamento de números que ultrapassam o limite do tipo `int`.
-
-
-
-\## Tecnologias utilizadas
+- Tratamento de números que ultrapassam o limite do tipo `int`.
 
 
 
-\- C++
-
-\- Dev-C++
+## Tecnologias utilizadas
 
 
 
-\## Como utilizar
+- C++
+
+- Dev-C++
 
 
 
-1\. Compile e execute o programa.
-
-2\. Escolha uma opção no menu.
-
-3\. Digite o número que deseja converter.
-
-4\. Visualize o resultado da conversão.
-
-5\. Digite `0` no menu para encerrar o programa.
+## Como utilizar
 
 
 
-\## Objetivo
+1. Compile e execute o programa.
+
+2. Escolha uma opção no menu.
+
+3. Digite o número que deseja converter.
+
+4. Visualize o resultado da conversão.
+
+5. Digite `0` no menu para encerrar o programa.
+
+
+
+## Objetivo
 
 
 
